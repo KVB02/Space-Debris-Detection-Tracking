@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
+    * {
+
+      a,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      td,
+      div,
+      li {
+        color: black;
+      }
+    }
+
     table {
       border-collapse: collapse;
       width: 100%;
@@ -33,6 +50,8 @@
 
     body {
       font-family: Arial, sans-serif;
+      color: black;
+      /* Dark text color */
     }
 
     nav ul {
@@ -57,6 +76,7 @@
     }
 
     section {
+
       margin: 20px 0;
       padding: 20px;
       border-radius: 8px;
@@ -75,6 +95,87 @@
       color: white;
       text-align: center;
       padding: 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      nav ul {
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+      }
+
+      th,
+      td {
+        white-space: nowrap;
+        padding: 8px;
+      }
+
+      section {
+        padding: 15px;
+        margin: 10px 0;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      h2 {
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      nav ul li a {
+        font-size: 0.9em;
+      }
+
+      body {
+        font-size: 14px;
+      }
+
+      section {
+        padding: 10px;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+
+      body {
+        font-family: Arial, sans-serif;
+        color: blue;
+        /* Dark text color */
+      }
+
+      nav ul {
+        padding: 10px 20px;
+        /* More padding for a wider layout */
+      }
+
+      section {
+        padding: 25px;
+        /* More padding inside sections for aesthetic spacing */
+      }
+
+      table {
+        font-size: 16px;
+        /* Larger font size for tables for easier reading */
+      }
+
+      h2,
+      h3 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
     }
   </style>
   <script>
